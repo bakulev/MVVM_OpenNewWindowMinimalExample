@@ -9,4 +9,7 @@
         <Button Content="Открыть обычное дочернее окно" Command="{Binding OpenChildWindow}"/>
         <Button Content="Открыть диалоговое окно" Command="{Binding OpenDialogWindow}"/>
     </StackPanel>
+    <Window.InputBindings>
+        <KeyBinding Command="{Binding ExitCommand, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" Gesture="Ctrl+X"/>
+    </Window.InputBindings>
 </Window>

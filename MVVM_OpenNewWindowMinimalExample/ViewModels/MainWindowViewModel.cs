@@ -73,7 +73,7 @@ namespace MVVM_OpenNewWindowMinimalExample.ViewModels
         }
         public override bool CanExecute(object parameter)
         {
-            return false;
+            return true;
         }
         public override void Execute(object parameter)
         {
