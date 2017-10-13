@@ -54,6 +54,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="DisplayRootRegistry.cs" />
     <Compile Include="Services\DialogWindowService.cs" />
     <Compile Include="Services\RegularChildWindowService.cs" />
     <Compile Include="ViewModels\BasicViewModel.cs" />

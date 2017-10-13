@@ -11,5 +11,7 @@
     </StackPanel>
     <Window.InputBindings>
         <KeyBinding Command="{Binding ExitCommand, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" Gesture="Ctrl+X"/>
+        <KeyBinding Command="{Binding OpenChildWindow}" Gesture="Ctrl+Y"/>
+        <KeyBinding Command="{Binding OpenDialogWindow}" Gesture="Ctrl+Z"/>
     </Window.InputBindings>
 </Window>

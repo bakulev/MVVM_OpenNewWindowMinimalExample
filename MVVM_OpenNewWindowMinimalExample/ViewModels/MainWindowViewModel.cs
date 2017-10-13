@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Windows;
 using System.Windows.Input;
 
 namespace MVVM_OpenNewWindowMinimalExample.ViewModels
@@ -60,9 +61,12 @@ namespace MVVM_OpenNewWindowMinimalExample.ViewModels
         {
             return true;
         }
-        public override void Execute(object parameter)
+        public override async void Execute(object parameter)
         {
+            var displayRootRegistry = (Application.Current as App).displayRootRegistry;
 
+            var otherWindowViewModel = new OtherWindowViewModel();
+            await displayRootRegistry.ShowModalPresentation(otherWindowViewModel);
         }
     }
 
@@ -75,8 +79,12 @@ namespace MVVM_OpenNewWindowMinimalExample.ViewModels
         {
             return true;
         }
-        public override void Execute(object parameter)
+        public override async void Execute(object parameter)
         {
+            var displayRootRegistry = (Application.Current as App).displayRootRegistry;
+
+            var dialogWindowViewModel = new DialogWindowViewModel();
+            await displayRootRegistry.ShowModalPresentation(dialogWindowViewModel);
 
         }
     }
