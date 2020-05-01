@@ -61,12 +61,12 @@ namespace MVVM_OpenNewWindowMinimalExample.ViewModels
         {
             return true;
         }
-        public override async void Execute(object parameter)
+        public override void Execute(object parameter)
         {
             var displayRootRegistry = (Application.Current as App).displayRootRegistry;
 
             var otherWindowViewModel = new OtherWindowViewModel();
-            await displayRootRegistry.ShowModalPresentation(otherWindowViewModel);
+            displayRootRegistry.ShowPresentation(otherWindowViewModel);
         }
     }
 
